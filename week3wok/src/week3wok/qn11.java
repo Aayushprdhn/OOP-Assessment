@@ -1,0 +1,31 @@
+package week3wok;
+
+public class qn11 {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class Address{
+	private String street;
+	private String city;
+	private int zipCode;
+	
+	public String getCity() {
+		return this.city;
+	}
+	
+	public String getStreet() {
+		return this.street;
+	}
+	
+	public int getZipCode() {
+		return this.zipCode;
+	}
+	
+	public void setAddress(String city, String street, int zipCode) {
+		this.city = city;
+		this.street = street;
+		this.zipCode = zipCode;
+	}
+}
