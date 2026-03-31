@@ -8,7 +8,7 @@ public class qn3 {
 	public static void main(String[] args) {
 		
 	
-		Dog2 dog2 = new Dog2("Haiti");
+		Dog2 dog2 = new Dog2("Gidaa");
 	}
 }
 
