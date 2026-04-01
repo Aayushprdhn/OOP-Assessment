@@ -36,8 +36,8 @@ public class casestudy {
 					
 					int len2 = number.length();
 					
-					if (len2!=10) {
-						System.out.println("The total digit should be 10.");
+					if (len2!=10 || !number.startsWith("0")) {
+						System.out.println("The total digit should be 10 and start with 0.");
 						continue;
 					}
 					break;
@@ -47,18 +47,41 @@ public class casestudy {
 					DOB = scanner.nextLine();
 					
 					int len3 = DOB.length();
-				if (len3!= 10) {
-					System.out.println("DOB must be in format DD//MM//YY.");
+				if (!DOB.matches("\\d{2}/\\d{2}/\\d{4}")) {
+					System.out.println("Invalid format.");
+					continue;
+				}
+				int year = Integer.parseInt(DOB.substring(6));
+				int age = 2026 - year;
+				
+				if (age<21) {
+					System.out.println("Age must atleast be 21 years old");
 					continue;
 				}
 				break;
 				}
+				while (true) {
 				System.out.println("Please enter your password: ");
 				password = scanner.nextLine();
 				
+				if (!password.matches("[A-Za-z]+[@&][0-9]+")) {
+					System.out.println("Password must start with letters, contain @ and end with numbers");
+					continue;
+				}
+				System.out.println("Please confirm your password");
+				String confirmPass = scanner.nextLine();
+				
+				if (!password.equals(confirmPass)) {
+					System.out.println("Password do not match");
+					continue;
+				}
+				break;
+				}
+				
 				userSignup user  = new userSignup(name, number, DOB, password);
+				System.out.println("You have successfully signed up.");
 			}
-			if (choice == 2) {
+			else if (choice == 2) {
 				System.out.println("Thank you for using this application.");
 				break;
 			}
