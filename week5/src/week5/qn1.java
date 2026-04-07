@@ -6,5 +6,7 @@ public class qn1 {
 	}
 }
 abstract class Shape{
-	
+	// Question 2
+	public abstract void calculateArea();
+	public abstract void calculatePerimeter();
 }
