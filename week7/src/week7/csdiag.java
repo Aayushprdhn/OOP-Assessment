@@ -2,7 +2,19 @@ package week7;
 
 public class csdiag {
 	public static void main(String[] args) {
+		Account acc1 = new Account("Aayush", "Pradhan", 101, 10000);
+		Account acc2 = new Account("Ishan", "Shrestha", 100, 120000);
 		
+		System.out.println("Before Transaction");
+		acc1.displayAccount();
+		acc2.displayAccount();
+		
+		Transaction t = new Transaction();
+		t.transfer(acc1, acc2, 500);
+		
+		System.out.println("After Transaction");
+		acc1.displayAccount();
+		acc2.displayAccount();
 	}
 }
 
@@ -16,7 +28,7 @@ class Customer{
 	}
 	
 	public void displayCustomer() {
-		System.out.println("Customer" +Firstname +" " + Lastname);
+		System.out.println("Customer" +Firstname + " " + Lastname);
 	}
 }
 
@@ -32,13 +44,13 @@ class Account extends Customer{
 	
 	public void deposit(double amount) {
 		balance += amount;
-		System.out.println("Deposited: "+amount);
+		System.out.println("Deposited: "+ amount);
 	}
 	
 	public void withdraw(double amount) {
 		if (amount <= balance) {
 			balance -= amount;
-			System.out.println("Withdraw:"+amount);
+			System.out.println("Withdraw:"+ amount);
 		} else {
 			System.out.println("Insufficient balance!");
 		}
@@ -56,5 +68,17 @@ class Account extends Customer{
 		displayCustomer();
 		System.out.println("Account No:"+ accountNumber);
 		System.out.println("Balance:"+ balance);
+	}
+}
+
+class Transaction{
+	public void transfer(Account fromAccount, Account toAccount, double amount) {
+		if (fromAccount.getBalance() >= amount) {
+			fromAccount.withdraw(amount);
+			toAccount.deposit(amount);
+			System.out.println("Transfer successful!");
+		}else {
+			System.out.println("Transfer failed! Insufficient balance.");
+		}
 	}
 }
