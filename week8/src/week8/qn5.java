@@ -14,7 +14,7 @@ public class qn5 {
 		
 			Scanner scanner = new Scanner(System.in);
 			
-		FileWriter  writer = new FileWriter ("files/CSVStudentFilenum5.csv",true );
+		FileWriter  writer = new FileWriter ("file/CSVStudent.csv",true );
 		
 		System.out.println("Enter the number of students");
 		int num = scanner.nextInt();

@@ -10,15 +10,15 @@ public class qn3 {
 		
 		qn3 obj = new qn3();
 		
-		List<Integer> numbers = obj.read("files/numbers.txt");
+		List<Integer> numbers = obj.read("file/numbers.txt");
 		
 		List<Integer> evenNumbers = obj.getEven(numbers);
 		List<Integer> oddNumbers = obj.getOdd(numbers);
 		
-		obj.write(oddNumbers, "files/oddNum.txt");
-		obj.write(evenNumbers, "files/evenNum.txt");
+		obj.write(oddNumbers, "file/oddNum.txt");
+		obj.write(evenNumbers, "file/evenNum.txt");
 		
-		System.out.println("The Odd and Even numbers have been saved on respective files. Please check in the Medias Folder.");
+		System.out.println("The Odd and Even numbers have been saved.");
 		
 	}
 	

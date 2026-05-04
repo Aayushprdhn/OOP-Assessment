@@ -3,7 +3,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedReader;
 
-// TASK 13
 public class qn4 {
 
 	public static void main(String[]  args) {
@@ -11,7 +10,7 @@ public class qn4 {
 		int wordCount = 0;
 		
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("files/one.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("file/one.txt"));
 			
 			String line;
 			
