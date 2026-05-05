@@ -1,0 +1,5 @@
+product;price
+Laptop;40000
+Speaker;450000
+Phone;550000
+Laptop;80000
